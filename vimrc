@@ -87,7 +87,13 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
 Bundle 'matchit.zip'
 Bundle 'regedarek/ZoomWin'
+" Bundle 'jelera/vim-javascript-syntax'
+" Bundle 'jiangmiao/auto-pairs'
 
+" ===================================
+" manually checkout this version of nerdtree
+"  git co 205367ab3f46dcc88b6ebb819a276e793a21e995
+"    HEAD is now at 205367a... update changelog/credits and bump to version 4.2.0
 Bundle 'scrooloose/nerdtree'
 let g:NERDTreeMapOpenVSplit = "<C-v>"
 let g:NERDTreeMapOpenSplit = "<C-s>"
