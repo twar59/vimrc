@@ -67,80 +67,83 @@ nnoremap <silent> <LocalLeader>re :e ~/vimrc/vimrc<CR>
 " ======================
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install bundles
 "let path = '~/some/path/here'
 "call vundle#rc(path)
+"
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'vim-airline'
-Bundle 'roman/golden-ratio'
+Plugin 'vim-airline'
+Plugin 'roman/golden-ratio'
 let g:golden_ratio_exclude_nonmodifiable = 1
 
-Bundle 'lsdr/monokai'
+Plugin 'lsdr/monokai'
 
-Bundle "SuperTab"
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-surround'
-Bundle 'matchit.zip'
-Bundle 'regedarek/ZoomWin'
-" Bundle 'jelera/vim-javascript-syntax'
-" Bundle 'jiangmiao/auto-pairs'
+Plugin 'SuperTab'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'matchit.zip'
+Plugin 'regedarek/ZoomWin'
+" Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'jiangmiao/auto-pairs'
 
 " ===================================
 " manually checkout this version of nerdtree
 "  git co 205367ab3f46dcc88b6ebb819a276e793a21e995
 "    HEAD is now at 205367a... update changelog/credits and bump to version 4.2.0
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 let g:NERDTreeMapOpenVSplit = "<C-v>"
 let g:NERDTreeMapOpenSplit = "<C-s>"
 "let g:NERDTreeWinSize = 10
 nmap <silent> <C-D> :NERDTreeToggle<CR>
 nmap <silent> <C-d> :execute ':edit '.expand("%:p:h")<CR>
 
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = "<C-t>"
 let g:ctrlp_cmd = 'CtrlPMixed'
 
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'einars/js-beautify'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
 
 
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-repeat'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-rails'
-Bundle 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-repeat'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rails'
+Plugin 'mustache/vim-mustache-handlebars'
 
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 let g:gitgutter_signs = 0
 highlight SignColumn ctermbg=black
 
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
-Bundle 'ack.vim'
+Plugin 'ack.vim'
 
-" Bundle 'tomasr/molokai'
-Bundle 'sickill/vim-monokai'
+" Plugin 'tomasr/molokai'
+Plugin 'sickill/vim-monokai'
 " colorscheme molokai
 
-filetype plugin indent on     " required
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" filetype plugin on
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
-
-
+" Put your non-Plugin stuff after this line
 " ======================
 
 function! ToggleVerbose()
