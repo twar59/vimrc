@@ -105,7 +105,19 @@ nmap <silent> <C-d> :execute ':edit '.expand("%:p:h")<CR>
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = "<C-t>"
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlP' " 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'c'
+"  c - the directory of the current file.
+"  a - like "c", but only applies when the current working directory outside of
+"      CtrlP isn't a direct ancestor of the directory of the current file.
+"  r - the nearest ancestor that contains one of these directories or files:
+"      .git .hg .svn .bzr _darcs
+"  w - begin finding a root from the current working directory outside of CtrlP
+"      instead of from the directory of the current file (default). Only applies
+"      when "r" is also present.
+"  0 or <empty> - disable this feature.
+
+let g:ctrlp_reuse_window = 'netrw\|help\|nerd'
 
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
