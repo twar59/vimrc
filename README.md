@@ -7,11 +7,11 @@ my vimrc
 
 1. Clone
 
-  ` $ git clone https://github.com/twar59/vimrc.git`
+  `$ git clone https://github.com/twar59/vimrc.git`
 
 2. Link
 
-  ` $ ln -s ~/vimrc/vimrc ~/.vimrc
+  `$ ln -s ~/vimrc/vimrc ~/.vimrc`
 
 3. Set up [Vundle]:
 
